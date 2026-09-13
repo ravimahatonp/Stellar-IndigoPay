@@ -21,15 +21,12 @@ frontend/blob-report/
 # Generated TypeDoc output (regenerated via `npx typedoc` in backend/)
 docs/backend/
 
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
 *.swp
 
@@ -61,3 +58,4 @@ frontend/locale-coverage.json
 
 # Chaos suite runtime marker/summary directory (regenerated on every run)
 .chaos-run/
+config.bat

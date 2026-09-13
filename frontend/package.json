@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:docker": "next dev --hostname 0.0.0.0",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "dev:docker": "node init && next dev --hostname 0.0.0.0",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint .",
     "type-check": "tsc --noEmit",
     "test": "jest",
@@ -18,7 +18,7 @@
     "test:smoke:install": "node -e \"require.resolve('jest-axe'); require.resolve('axe-core'); console.log('jest-axe + axe-core resolved cleanly')\"",
     "a11y:scan": "node scripts/axe-scan.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "storybook:smoke": "storybook build"
   },
   "dependencies": {
@@ -101,6 +101,7 @@
     "next": {
       "postcss": "8.5.26"
     },
-    "sharp": "0.35.0"
+    "sharp": "^0.35.4",
+    "toml": "^4.2.0"
   }
 }

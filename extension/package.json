@@ -2,9 +2,9 @@
   "name": "indigopay-extension",
   "version": "0.1.0",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "node init && webpack --config webpack.config.js",
     "package": "node scripts/package-extension.js",
-    "dev": "webpack --watch --config webpack.config.js",
+    "dev": "node init && webpack --watch --config webpack.config.js",
     "test": "jest",
     "lint": "tsc --noEmit --project tsconfig.json",
     "check:csp": "node scripts/validate-csp.js",
